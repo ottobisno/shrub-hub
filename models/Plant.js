@@ -16,8 +16,8 @@ Plant.init(
         type: DataTypes.STRING,
         allowNull: false
        },
-       description: {
-        type: DataTypes.TEXT,
+       classification: {
+        type: DataTypes.STRING,
         allowNull: false
        },
        date_created: {
