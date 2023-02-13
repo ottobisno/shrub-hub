@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS shrub_hub_db;
+CREATE DATABASE shrub_hub_db;
