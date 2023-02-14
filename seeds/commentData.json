@@ -1,0 +1,50 @@
+[
+    {
+        "comment_body": "OMG, I love this one. I've been meaning to get one of these for the longest time.",
+        "created_by": "Star",
+        "user_id": 1,
+        "plant_id": 2
+    },
+    {
+        "comment_body": "Nice plant you got there",
+        "created_by": "Raine",
+        "user_id": 2,
+        "plant_id": 4
+    },
+    {
+        "comment_body": "I'm so jelly, been wanting one of these forever!",
+        "created_by": "Yoshi",
+        "user_id": 6,
+        "plant_id": 5
+    },
+    {
+        "comment_body": "Pretty cool, but not as cool as the one I have in my office. Sorry not sorry.",
+        "created_by": "Raine",
+        "user_id": 2,
+        "plant_id": 7
+    },
+    {
+        "comment_body": "Beatiful photo *chefs kiss*",
+        "created_by": "Gregory",
+        "user_id": 4,
+        "plant_id": 11
+    },
+    {
+        "comment_body": "Oh my..",
+        "created_by": "Raine",
+        "user_id": 2,
+        "plant_id": 7
+    },
+    {
+        "comment_body": "No THAT'S what I'm talkin' about!",
+        "created_by": "Gregory",
+        "user_id": 4,
+        "plant_id": 8
+    },
+    {
+        "comment_body": "Wow, just wow.",
+        "created_by": "Raine",
+        "user_id": 2,
+        "plant_id": 13
+    }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Milde",
+        "classification": "Snake Plant",
+        "user_id": 1
+    },
+    {
+        "name": "Burt",
+        "classification": "Snake Plant",
+        "user_id": 2
+    },
+    {
+        "name": "Salvo",
+        "classification": "Peace Lily",
+        "user_id": 6
+    },
+    {
+        "name": "Spooch",
+        "classification": "Peace Lily",
+        "user_id": 3
+    },
+    {
+        "name": "Roger",
+        "classification": "Fiddle Leaf Fig",
+        "user_id": 4
+    },
+    {
+        "name": "Raphael",
+        "classification": "Fiddle Leaf Fig",
+        "user_id": 5
+    },
+    {
+        "name": "Koopa",
+        "classification": "Philodendron",
+        "user_id": 6
+    },
+    {
+        "name": "Kamek",
+        "classification": "Philodendron",
+        "user_id": 1
+    },
+    {
+        "name": "Bandit",
+        "classification": "ZZ Plant",
+        "user_id": 3
+    },
+    {
+        "name": "Slime",
+        "classification": "ZZ Plant",
+        "user_id": 4
+    },
+    {
+        "name": "Gusty",
+        "classification": "Pothos",
+        "user_id": 3
+    },
+    {
+        "name": "Goonie",
+        "classification": "Pothos",
+        "user_id": 2
+    },
+    {
+        "name": "Bumpty",
+        "classification": "Pothos",
+        "user_id": 5
+    },
+    {
+        "name": "Lakitu",
+        "classification": "Majesty Palm",
+        "user_id": 2
+    },
+    {
+        "name": "Jasper",
+        "classification": "Majesty Palm",
+        "user_id": 3
+    },
+    {
+        "name": "Chamberlin",
+        "classification": "Dumb Cane",
+        "user_id": 4
+    },
+    {
+        "name": "Leonard",
+        "classification": "Dumb Cane",
+        "user_id": 3
+    },
+    {
+        "name": "Bart",
+        "classification": "Cactus",
+        "user_id": 5
+    },
+    {
+        "name": "Pokey",
+        "classification": "Cactus",
+        "user_id": 6
+    },
+    {
+        "name": "Sebastian",
+        "classification": "Cactus",
+        "user_id": 1
+    }
+]

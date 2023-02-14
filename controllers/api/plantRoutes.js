@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Plant, Comment } = require('../../models');
+const { Plant } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // Create a new plant post
