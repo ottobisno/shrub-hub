@@ -99,15 +99,18 @@ const plantUpdateSubmit = async (event) => {
     };
 };
 
-newPlantBtn.addEventListener('click', showNewPlantFormHandler);
+newPlantBtn
+    .addEventListener('click', showNewPlantFormHandler);
 
 document
-    .querySelector('#new-blog-form')
+    .querySelector('#new-plant-form')
     .addEventListener('submit', newPlantHandler);
 
-document.addEventListener('click', plantDeleteHandler);
+document
+    .addEventListener('click', plantDeleteHandler);
 
-document.addEventListener('click', plantUpdateHandler);
+document
+    .addEventListener('click', plantUpdateHandler);
 
 document
     .querySelector('#update-plant-form')

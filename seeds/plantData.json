@@ -6,12 +6,12 @@
     },
     {
         "name": "Burt",
-        "classification": "Snake Plant",
+        "classification": "Pothos",
         "user_id": 2
     },
     {
         "name": "Salvo",
-        "classification": "Peace Lily",
+        "classification": "ZZ Plant",
         "user_id": 6
     },
     {
@@ -21,7 +21,7 @@
     },
     {
         "name": "Roger",
-        "classification": "Fiddle Leaf Fig",
+        "classification": "Majesty Palm",
         "user_id": 4
     },
     {
@@ -31,17 +31,17 @@
     },
     {
         "name": "Koopa",
-        "classification": "Philodendron",
+        "classification": "Dumb Cane",
         "user_id": 6
     },
     {
         "name": "Kamek",
-        "classification": "Philodendron",
+        "classification": "Cactus",
         "user_id": 1
     },
     {
         "name": "Bandit",
-        "classification": "ZZ Plant",
+        "classification": "Peace Lily",
         "user_id": 3
     },
     {
@@ -51,7 +51,7 @@
     },
     {
         "name": "Gusty",
-        "classification": "Pothos",
+        "classification": "Snake Plant",
         "user_id": 3
     },
     {
@@ -66,7 +66,7 @@
     },
     {
         "name": "Lakitu",
-        "classification": "Majesty Palm",
+        "classification": "Fiddle Leaf Fig",
         "user_id": 2
     },
     {
@@ -81,7 +81,7 @@
     },
     {
         "name": "Leonard",
-        "classification": "Dumb Cane",
+        "classification": "Philodendron",
         "user_id": 3
     },
     {
@@ -91,7 +91,7 @@
     },
     {
         "name": "Pokey",
-        "classification": "Cactus",
+        "classification": "Philodendron",
         "user_id": 6
     },
     {
