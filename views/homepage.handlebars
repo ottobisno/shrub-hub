@@ -6,6 +6,7 @@
     <a class="card-header text-center bg-dark" href="/plant/{{plant.id}}">
       <h2>{{plant.name}}</h2>
     </a>
+    <img src="/img/uploads/{{plant.image}}" alt="logo">
     <div class="card-body bg-light">
       <p class="card-text">{{plant.classification}}</p>
       <p class="card-text"><small class="text-muted">Posted by: {{plant.user.name}} on {{formatDate plant.date_created}}</small></p>

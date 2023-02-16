@@ -2,101 +2,121 @@
     {
         "name": "Milde",
         "classification": "Snake Plant",
-        "user_id": 1
+        "user_id": 1,
+        "image": "snake-plant-1.jpg"
     },
     {
         "name": "Burt",
         "classification": "Pothos",
-        "user_id": 2
+        "user_id": 2,
+        "image": "pothos-1.jpg"
     },
     {
         "name": "Salvo",
         "classification": "ZZ Plant",
-        "user_id": 6
+        "user_id": 6,
+        "image": "zz-plant-1.jpg"
     },
     {
         "name": "Spooch",
         "classification": "Peace Lily",
-        "user_id": 3
+        "user_id": 3,
+        "image": "peace-lily-1.jpeg"
     },
     {
         "name": "Roger",
         "classification": "Majesty Palm",
-        "user_id": 4
+        "user_id": 4,
+        "image": "majesty-palm-1.jpg"
     },
     {
         "name": "Raphael",
         "classification": "Fiddle Leaf Fig",
-        "user_id": 5
+        "user_id": 5,
+        "image": "fiddle-leaf-fig-2.jpeg"
     },
     {
-        "name": "Koopa",
+        "name": "Goober",
         "classification": "Dumb Cane",
-        "user_id": 6
+        "user_id": 6,
+        "image": "dumb-cane-1.png"
     },
     {
         "name": "Kamek",
         "classification": "Cactus",
-        "user_id": 1
+        "user_id": 1,
+        "image": "cactus-2.jpg"
     },
     {
         "name": "Bandit",
         "classification": "Peace Lily",
-        "user_id": 3
+        "user_id": 3,
+        "image": "peace-lily-2.jpeg"
     },
     {
         "name": "Slime",
         "classification": "ZZ Plant",
-        "user_id": 4
+        "user_id": 4,
+        "image": "zz-plant-2.jpg"
     },
     {
         "name": "Gusty",
         "classification": "Snake Plant",
-        "user_id": 3
+        "user_id": 3,
+        "image": "snake-plant-2.jpg"
     },
     {
         "name": "Goonie",
-        "classification": "Pothos",
-        "user_id": 2
+        "classification": "Monstera",
+        "user_id": 2,
+        "image": "monstera-1.jpg"
     },
     {
         "name": "Bumpty",
         "classification": "Pothos",
-        "user_id": 5
+        "user_id": 5,
+        "image": "pothos-2.jpg"
     },
     {
         "name": "Lakitu",
         "classification": "Fiddle Leaf Fig",
-        "user_id": 2
+        "user_id": 2,
+        "image": "fiddle-leaf-fig-1.jpg"
     },
     {
         "name": "Jasper",
         "classification": "Majesty Palm",
-        "user_id": 3
+        "user_id": 3,
+        "image": "majesty-palm-2.jpg"
     },
     {
         "name": "Chamberlin",
         "classification": "Dumb Cane",
-        "user_id": 4
+        "user_id": 4,
+        "image": "dumb-cane-2.jpg"
     },
     {
         "name": "Leonard",
         "classification": "Philodendron",
-        "user_id": 3
+        "user_id": 3,
+        "image": "philodendron-1.jpg"
     },
     {
         "name": "Bart",
         "classification": "Cactus",
-        "user_id": 5
+        "user_id": 5,
+        "image": "cactus-1.jpg"
     },
     {
-        "name": "Pokey",
+        "name": "Jacob",
         "classification": "Philodendron",
-        "user_id": 6
+        "user_id": 6,
+        "image": "philodendron-2.jpg"
     },
     {
         "name": "Sebastian",
-        "classification": "Cactus",
-        "user_id": 1
+        "classification": "Monstera",
+        "user_id": 1,
+        "image": "monstera-2.jpg"
     }
 ]

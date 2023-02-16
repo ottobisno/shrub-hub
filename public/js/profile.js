@@ -11,26 +11,26 @@ const showNewPlantFormHandler = async => {
 };
 
 // Handler for creating a new plant
-const newPlantHandler = async (event) => {
-    event.preventDefault();
+// const newPlantHandler = async (event) => {
+//     event.preventDefault();
 
-    const name = document.querySelector('#plant-name').value.trim();
-    const classification = document.querySelector('#plant-classification').value.trim();
+//     const name = document.querySelector('#plant-name').value.trim();
+//     const classification = document.querySelector('#plant-classification').value.trim();
+//     const image = document.querySelector('#img-upload');
 
-    if (name && classification) {
-        const response = await fetch('/api/plants', {
-            method: 'POST',
-            body: JSON.stringify({ name, classification }),
-            headers: { 'Content-Type': 'application/json' }
-        });
+//     if (name && classification && image) {
+//         const response = await fetch('/api/plants', {
+//             method: 'POST',
+//             body: JSON.stringify({ name, classification, image })
+//         });
 
-        if (response.ok) {
-            document.location.replace('/profile');
-        } else {
-            alert('Failed to create new plant')
-        };
-    };
-};
+//         if (response.ok) {
+//             document.location.replace('/profile');
+//         } else {
+//             alert('Failed to create new plant')
+//         };
+//     };
+// };
 
 // Handler for deleting plants
 const plantDeleteHandler = async (event) => {
@@ -102,9 +102,9 @@ const plantUpdateSubmit = async (event) => {
 newPlantBtn
     .addEventListener('click', showNewPlantFormHandler);
 
-document
-    .querySelector('#new-plant-form')
-    .addEventListener('submit', newPlantHandler);
+// document
+//     .querySelector('#new-plant-form')
+//     .addEventListener('submit', newPlantHandler);
 
 document
     .addEventListener('click', plantDeleteHandler);
