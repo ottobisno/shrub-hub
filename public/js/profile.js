@@ -11,26 +11,27 @@ const showNewPlantFormHandler = async => {
 };
 
 // Handler for creating a new plant
-// const newPlantHandler = async (event) => {
-//     event.preventDefault();
+const newPlantHandler = async (event) => {
+    event.preventDefault();
 
-//     const name = document.querySelector('#plant-name').value.trim();
-//     const classification = document.querySelector('#plant-classification').value.trim();
-//     const image = document.querySelector('#img-upload');
+    const name = document.querySelector('#plant-name').value.trim();
+    const classification = document.querySelector('#plant-classification').value.trim();
+    // Storing the form data in an object so the image file can be used in the request body
+    const formData = new FormData(document.querySelector('#new-plant-form'));
 
-//     if (name && classification && image) {
-//         const response = await fetch('/api/plants', {
-//             method: 'POST',
-//             body: JSON.stringify({ name, classification, image })
-//         });
+    if (name && classification) {
+        const response = await fetch('/api/plants', {
+            method: 'POST',
+            body: formData
+        });
 
-//         if (response.ok) {
-//             document.location.replace('/profile');
-//         } else {
-//             alert('Failed to create new plant')
-//         };
-//     };
-// };
+        if (response.ok) {
+            document.location.replace('/profile');
+        } else {
+            alert('Failed to create new plant - please provide a valid image file');
+        };
+    };
+};
 
 // Handler for deleting plants
 const plantDeleteHandler = async (event) => {
@@ -102,9 +103,9 @@ const plantUpdateSubmit = async (event) => {
 newPlantBtn
     .addEventListener('click', showNewPlantFormHandler);
 
-// document
-//     .querySelector('#new-plant-form')
-//     .addEventListener('submit', newPlantHandler);
+document
+    .querySelector('#new-plant-form')
+    .addEventListener('submit', newPlantHandler);
 
 document
     .addEventListener('click', plantDeleteHandler);

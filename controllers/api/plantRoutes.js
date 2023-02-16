@@ -4,24 +4,10 @@ const withAuth = require('../../utils/auth');
 const uploadFile = require('../../utils/uploadFile');
 
 // Create a new plant post
-// router.post('/', withAuth, async (req, res) => {
-//     try {
-//         const newPlant = await Plant.create({
-//             ...req.body,
-//             user_id: req.session.user_id
-//         });
-
-//         res.status(200).json(newPlant);
-
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// });
-
-router.post('/', uploadFile.single('image'), async (req, res) => {
+router.post('/', withAuth, uploadFile.single('image'), async (req, res) => {
     try {
         if (req.file == undefined) {
-            res.status(404).json({ message: 'No plant found with this id' });
+            res.status(400).json({ message: 'Please provide a valid image file' });
             return;
         };
         const newPlant = await Plant.create({
@@ -31,7 +17,7 @@ router.post('/', uploadFile.single('image'), async (req, res) => {
             image: req.session.user_id + "-" + req.file.originalname,
         });
 
-        res.status(200).redirect('/profile');
+        res.status(200).json(newPlant);
 
     } catch (err) {
         res.status(400).json(err);
