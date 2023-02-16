@@ -84,18 +84,19 @@ const plantUpdateSubmit = async (event) => {
 
     const name = document.querySelector('#updated-name').value.trim();
     const classification = document.querySelector('#updated-classification').value.trim();
+    // Storing the form data in an object so the image file can be used in the request body
+    const formData = new FormData(document.querySelector('#update-plant-form'));
 
     if (name && classification) {
         const response = await fetch(`/api/plants/${plantID}`, {
             method: 'PUT',
-            body: JSON.stringify({ name, classification }),
-            headers: { 'Content-Type': 'application/json'}
+            body: formData
         });
 
         if (response.ok) {
             document.location.replace('/profile');
         } else {
-            alert('Failed to update plant');
+            alert('Failed to update plant - please provide a valid image file');
         };
     };
 };

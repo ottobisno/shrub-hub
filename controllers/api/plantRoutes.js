@@ -47,7 +47,7 @@ router.delete('/:id', withAuth, async (req, res) => {
 });
 
 // Update an existing plant post
-router.put('/:id', withAuth, async (req, res) => {
+router.put('/:id', withAuth, uploadFile.single('image'), async (req, res) => {
     try {
         const plantData = await Plant.findByPk(req.params.id);
 
@@ -57,8 +57,10 @@ router.put('/:id', withAuth, async (req, res) => {
         };
 
         const newPlantData = await plantData.update({
-            ...req.body,
-            user_id: req.session.user_id
+            name: req.body.name,
+            classification: req.body.classification,
+            user_id: req.session.user_id,
+            image: req.session.user_id + "-" + req.file.originalname,
         });
 
         res.status(200).json(newPlantData);
