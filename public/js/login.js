@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
             // If successful, redirect the user to the 'profile' page
             document.location.replace('/profile');
         } else {
-            alert (response.statusText);
+            alert ('Sorry, we did not find a match with that information, please try again');
         };
     };
 };
@@ -39,7 +39,7 @@ const signupFormHandler = async (event) => {
         if (response.ok) {
             document.location.replace('/profile');
         } else {
-            alert(response.statusText);
+            alert('Please ensure you are using a valid email and the password you have entered is at least 8 characters in length');
         };
     };
 };

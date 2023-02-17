@@ -1,13 +1,39 @@
 const newPlantForm = document.querySelector('#new-plant-card');
 const newPlantBtn = document.querySelector('#new-plant-btn');
+const updatePlantForm = document.querySelector('#update-plant-card');
 var plantID;
 var plantName;
 var plantClassification;
 
 // Collapses the 'Add New Plant' button and displays the form to create a new plant
-const showNewPlantFormHandler = async => {
+const showNewPlantFormHandler = () => {
+    // Displaying the form for creating a new plant and hiding the associated button
     newPlantForm.setAttribute('style', 'display: flex');
     newPlantBtn.setAttribute('style', 'display: none');
+
+    // Hiding all plant cards to focus on adding a new plant
+    const allPlantCards = document.querySelectorAll('.plant-card');
+    allPlantCards.forEach(card => {
+        card.style.display = 'none';
+    });
+};
+
+// Handler for hiding the form to create a new plant
+const hideNewPlantFormHandler = () => {
+    // Hiding the form for creating a new plant and showing the associated button
+    newPlantForm.setAttribute('style', 'display: none');
+    newPlantBtn.setAttribute('style', 'display: flex');
+
+    // Clearing the fields on the new plant form
+    document.querySelector('#plant-name').value = '';
+    document.querySelector('#plant-classification').value = '';
+    document.querySelector('#img-upload').value = '';
+
+    // Displaying all plant cards once more
+    const allPlantCards = document.querySelectorAll('.plant-card');
+    allPlantCards.forEach(card => {
+        card.style.display = 'flex';
+    });
 };
 
 // Handler for creating a new plant
@@ -70,7 +96,7 @@ const plantUpdateHandler = async (event) => {
         newPlantForm.setAttribute('style', 'display: none');
 
         // Displaying form to update the selected plant
-        document.querySelector('#update-plant-card').setAttribute('style', 'display: flex');
+        updatePlantForm.setAttribute('style', 'display: flex');
 
         // Prefilling form fields for the plant to be updated
         document.querySelector('#updated-name').value = plantName;
@@ -101,12 +127,29 @@ const plantUpdateSubmit = async (event) => {
     };
 };
 
+// Handler for hiding the form to update a plant
+const hideUpdatePlantFormHandler = () => {
+    // Hiding the form for updating a plant and showing the "add new plant" button"
+    updatePlantForm.setAttribute('style', 'display: none');
+    newPlantBtn.setAttribute('style', 'display: flex');
+
+    // Displaying all plant cards once more
+    const allPlantCards = document.querySelectorAll('.plant-card');
+    allPlantCards.forEach(card => {
+        card.style.display = 'flex';
+    });
+};
+
 newPlantBtn
     .addEventListener('click', showNewPlantFormHandler);
 
 document
     .querySelector('#new-plant-form')
     .addEventListener('submit', newPlantHandler);
+
+document
+    .querySelector('#new-back-btn')
+    .addEventListener('click', hideNewPlantFormHandler);
 
 document
     .addEventListener('click', plantDeleteHandler);
@@ -117,3 +160,7 @@ document
 document
     .querySelector('#update-plant-form')
     .addEventListener('submit', plantUpdateSubmit);
+
+document
+    .querySelector('#update-back-btn')
+    .addEventListener('click', hideUpdatePlantFormHandler);
