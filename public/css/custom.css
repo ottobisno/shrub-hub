@@ -1,22 +1,67 @@
+:root {
+    --dark-grn: rgb(20, 33, 20);
+    --light-grn: rgb(166, 216, 166);
+}
+
+body {
+    background-image: url('../img/assets/bg-img.webp');
+    background-color: aliceblue;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .card {
     padding-right: 0;
     padding-left: 0;
 }
 
-.card-header {
-    font-weight: 800;
-    color: whitesmoke;
-    text-decoration: underline;
+.dark-grn {
+    background-color: var(--dark-grn);
 }
 
-.card-title {
-    padding-left: 1.25rem;
-    padding-top: 1.25rem;
+.light-grn {
+    background-color: var(--light-grn);
+}
+
+.nav-link {
+    color: var(--light-grn);
     font-weight: bold;
 }
 
-#profile-card {
-    width: 25rem;
+.plant-card {
+    border-color: var(--dark-grn);
+    border-width: 2px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0%;
+}
+
+.plant-card-classification {
+    background-color: var(--dark-grn);
+    color: whitesmoke;
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+    font-style: italic;
+}
+
+.plant-card-header {
+    text-shadow: 2px 2px var(--dark-grn);
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: 'Chango', cursive;
+}
+
+.plant-card-header:hover {
+    color: var(--dark-grn);
+    text-shadow: 2px 2px var(--light-grn);
+}
+
+.plant-card-user {
+    background-color: whitesmoke;
+    text-align: center;
+    font-style: italic;
 }
 
 #plant-title-btn {
@@ -27,14 +72,21 @@
     outline: none;
 }
 
-#title {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: whitesmoke;
-    margin-right: 0px;
+#profile-card {
+    width: 25rem;
 }
 
-@media screen and (max-width: 355px) {
+#title {
+    font-size: 2rem;
+    font-weight: 700;
+    /* margin-right: 0px; */
+    text-shadow: 2px 2px var(--light-grn);
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: 'Chango', cursive;
+}
+
+@media screen and (max-width: 500px) {
     #nav-container {
         justify-content: center;
     }

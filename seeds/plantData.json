@@ -1,24 +1,24 @@
 [
     {
-        "name": "Milde",
+        "name": "Zover",
         "classification": "Snake Plant",
         "user_id": 1,
         "image": "snake-plant-1.jpg"
     },
     {
-        "name": "Burt",
+        "name": "Snitsa",
         "classification": "Pothos",
         "user_id": 2,
         "image": "pothos-1.jpg"
     },
     {
-        "name": "Salvo",
+        "name": "Chito",
         "classification": "ZZ Plant",
         "user_id": 6,
         "image": "zz-plant-1.jpg"
     },
     {
-        "name": "Spooch",
+        "name": "Shonley",
         "classification": "Peace Lily",
         "user_id": 3,
         "image": "peace-lily-1.jpeg"
@@ -78,7 +78,7 @@
         "image": "pothos-2.jpg"
     },
     {
-        "name": "Lakitu",
+        "name": "Jumbus",
         "classification": "Fiddle Leaf Fig",
         "user_id": 2,
         "image": "fiddle-leaf-fig-1.jpg"
@@ -90,7 +90,7 @@
         "image": "majesty-palm-2.jpg"
     },
     {
-        "name": "Chamberlin",
+        "name": "Fema",
         "classification": "Dumb Cane",
         "user_id": 4,
         "image": "dumb-cane-2.jpg"
@@ -108,13 +108,13 @@
         "image": "cactus-1.jpg"
     },
     {
-        "name": "Jacob",
+        "name": "Zulla",
         "classification": "Philodendron",
         "user_id": 6,
         "image": "philodendron-2.jpg"
     },
     {
-        "name": "Sebastian",
+        "name": "Saba",
         "classification": "Monstera",
         "user_id": 1,
         "image": "monstera-2.jpg"

@@ -1,8 +1,8 @@
-<h2 class="text-dark text-center font-weight-bold mt-3" id="profile-header">Welcome Back, {{name}}! Here Are Your Current Plants:</h2>
+<h2 class="text-dark text-center font-weight-bold pt-3" id="profile-header">Welcome Back, {{name}}! Here Are Your Current Plants:</h2>
 {{#if plants}}
 {{#each plants as |plant|}}
 <div class="card text-center mt-3 shadow box plant-card">
-    <a class="card-header text-center bg-dark" href="/plant/{{plant.id}}">
+    <a class="card-header plant-card-header text-center light-grn" href="/plant/{{plant.id}}">
         <h2>{{plant.name}}</h2>
     </a>
     <p class="px-3">{{classification}}</p>
