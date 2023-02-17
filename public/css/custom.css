@@ -1,11 +1,3 @@
-#plant-title-btn {
-    border-style: none;
-}
-
-#plant-title-btn:focus {
-    outline: none;
-}
-
 .card {
     padding-right: 0;
     padding-left: 0;
@@ -21,6 +13,18 @@
     padding-left: 1.25rem;
     padding-top: 1.25rem;
     font-weight: bold;
+}
+
+#profile-card {
+    width: 25rem;
+}
+
+#plant-title-btn {
+    border-style: none;
+}
+
+#plant-title-btn:focus {
+    outline: none;
 }
 
 #title {

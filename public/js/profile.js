@@ -1,15 +1,18 @@
+// Assigning commonly used elements to variables
 const newPlantForm = document.querySelector('#new-plant-card');
 const newPlantBtn = document.querySelector('#new-plant-btn');
 const updatePlantForm = document.querySelector('#update-plant-card');
+const profileHeader = document.querySelector('#profile-header');
 var plantID;
 var plantName;
 var plantClassification;
 
 // Collapses the 'Add New Plant' button and displays the form to create a new plant
 const showNewPlantFormHandler = () => {
-    // Displaying the form for creating a new plant and hiding the associated button
+    // Displaying the form for creating a new plant and hiding other elements
     newPlantForm.setAttribute('style', 'display: flex');
     newPlantBtn.setAttribute('style', 'display: none');
+    profileHeader.setAttribute('style', 'display: none');
 
     // Hiding all plant cards to focus on adding a new plant
     const allPlantCards = document.querySelectorAll('.plant-card');
@@ -20,9 +23,10 @@ const showNewPlantFormHandler = () => {
 
 // Handler for hiding the form to create a new plant
 const hideNewPlantFormHandler = () => {
-    // Hiding the form for creating a new plant and showing the associated button
+    // Hiding the form for creating a new plant and showing other elements
     newPlantForm.setAttribute('style', 'display: none');
     newPlantBtn.setAttribute('style', 'display: flex');
+    profileHeader.setAttribute('style', 'display: block');
 
     // Clearing the fields on the new plant form
     document.querySelector('#plant-name').value = '';
@@ -91,9 +95,9 @@ const plantUpdateHandler = async (event) => {
             card.style.display = 'none';
         });
 
-        // Hiding button for creating a new plant, as well as the plant form (if open)
+        // Hiding button for creating a new plant and page the header
         newPlantBtn.setAttribute('style', 'display: none');
-        newPlantForm.setAttribute('style', 'display: none');
+        profileHeader.setAttribute('style', 'display: none');
 
         // Displaying form to update the selected plant
         updatePlantForm.setAttribute('style', 'display: flex');
@@ -129,9 +133,10 @@ const plantUpdateSubmit = async (event) => {
 
 // Handler for hiding the form to update a plant
 const hideUpdatePlantFormHandler = () => {
-    // Hiding the form for updating a plant and showing the "add new plant" button"
+    // Hiding the form for updating a plant and showing other elements
     updatePlantForm.setAttribute('style', 'display: none');
     newPlantBtn.setAttribute('style', 'display: flex');
+    profileHeader.setAttribute('style', 'display: block');
 
     // Displaying all plant cards once more
     const allPlantCards = document.querySelectorAll('.plant-card');

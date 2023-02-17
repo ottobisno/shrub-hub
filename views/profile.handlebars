@@ -1,14 +1,16 @@
-<h2 class="text-dark text-center font-weight-bold mt-3">Hello {{name}}! Your Current Plants:</h2>
+<h2 class="text-dark text-center font-weight-bold mt-3" id="profile-header">Welcome Back, {{name}}! Here Are Your Current Plants:</h2>
 {{#if plants}}
 {{#each plants as |plant|}}
 <div class="card text-center mt-3 shadow box plant-card">
-  <h2 class="mt-3 font-weight-bold">{{name}}</h2>
-  <p class="px-3">{{classification}}</p>
-  <p><small class="text-muted">Posted by: {{../name}} on {{formatDate date_created}}</small></p>
-  <div class="plant-functions mb-3 d-flex justify-content-center">
-    <button type="click" class="btn btn-primary update-btn mx-1" data-update="{{id}}" data-name="{{name}}" data-classification="{{classification}}">Update</button>
-    <button type="click" class="btn btn-danger delete-btn mx-1" data-delete="{{id}}">Delete</button>
-  </div>
+    <a class="card-header text-center bg-dark" href="/plant/{{plant.id}}">
+        <h2>{{plant.name}}</h2>
+    </a>
+    <p class="px-3">{{classification}}</p>
+    <p><small class="text-muted">Posted by: {{../name}} on {{formatDate date_created}}</small></p>
+    <div class="plant-functions mb-3 d-flex justify-content-center">
+        <button type="click" class="btn btn-primary update-btn mx-1" data-update="{{id}}" data-name="{{name}}" data-classification="{{classification}}">Update</button>
+        <button type="click" class="btn btn-danger delete-btn mx-1" data-delete="{{id}}">Delete</button>
+    </div>
 </div>
 {{/each}}
 {{/if}}
@@ -17,47 +19,53 @@
 </div>
 
 {{!-- Form for adding a new plant --}}
-<div class="card p-3" id="new-plant-card" style="display: none">
-    <form class="form" id="new-plant-form" enctype="multipart/form-data">
-        <div>
-            <label for="plant-name" class="form-label">Name of Plant:</label>
-            <input class="form-control" id="plant-name" name="name" required>
-        </div>
-        <div class="mt-3">
-            <label for="plant-classification" class="form-label">Classification of Plant:</label>
-            <input class="form-control" id="plant-classification" name="classification" required>
-        </div>
-        <div class="mt-3">
-            <span for="plant-image" class="form-label">Image of Plant:</span>
-            <input type="file" class="form-control-file mt-2" id="img-upload" name="image" required>
-        </div>
-        <div class="mt-3">
-            <button type="submit" class="btn btn-dark" id="plant-submit-btn">Submit</button>
-            <button type="click" class="btn btn-dark" id="new-back-btn">Go Back</button>
-        </div>
-    </form>
+<div class="container d-flex justify-content-center">
+    <div class="card p-3 profile-card" id="new-plant-card" style="display: none">
+        <h2 class="card-title p-0">Add a New Plant:</h2>
+        <form class="form" id="new-plant-form" enctype="multipart/form-data">
+            <div>
+                <label for="plant-name" class="form-label">Name of Plant:</label>
+                <input class="form-control" id="plant-name" name="name" required>
+            </div>
+            <div class="mt-3">
+                <label for="plant-classification" class="form-label">Classification of Plant:</label>
+                <input class="form-control" id="plant-classification" name="classification" required>
+            </div>
+            <div class="mt-3">
+                <span for="plant-image" class="form-label">Image of Plant:</span>
+                <input type="file" class="form-control-file mt-2" id="img-upload" name="image" required>
+            </div>
+            <div class="mt-3">
+                <button type="submit" class="btn btn-dark" id="plant-submit-btn">Submit</button>
+                <button type="click" class="btn btn-dark" id="new-back-btn">Go Back</button>
+            </div>
+        </form>
+    </div>
 </div>
 
 {{!-- Form for updating an existing plant --}}
-<div class="card p-3" id="update-plant-card" style="display: none">
-    <form class="form" id="update-plant-form" enctype="multipart/form-data">
-        <div>
-            <label for="plant-name" class="form-label">Name of Plant:</label>
-            <input class="form-control" id="updated-name" name="name" required>
-        </div>
-        <div class="mt-3">
-            <label for="plant-classification" class="form-label">Classification of Plant:</label>
-            <input class="form-control" id="updated-classification" name="classification" required>
-        </div>
-        <div class="mt-3">
-            <span for="plant-image" class="form-label">Image of Plant:</span>
-            <input type="file" class="form-control-file mt-2" id="img-upload" name="image" required>
-        </div>
-        <div class="mt-3">
-            <button type="submit" class="btn btn-dark" id="plant-update-btn">Submit</button>
-            <button type="click" class="btn btn-dark" id="update-back-btn">Go Back</button>
-        </div>
-    </form>
+<div class="container d-flex justify-content-center">
+    <div class="card p-3 profile-card" id="update-plant-card" style="display: none">
+        <h2 class="card-title p-0">Update Existing Plant:</h2>
+        <form class="form" id="update-plant-form" enctype="multipart/form-data">
+            <div>
+                <label for="plant-name" class="form-label">Name of Plant:</label>
+                <input class="form-control" id="updated-name" name="name" required>
+            </div>
+            <div class="mt-3">
+                <label for="plant-classification" class="form-label">Classification of Plant:</label>
+                <input class="form-control" id="updated-classification" name="classification" required>
+            </div>
+            <div class="mt-3">
+                <span for="plant-image" class="form-label">Image of Plant:</span>
+                <input type="file" class="form-control-file mt-2" id="img-upload" name="image" required>
+            </div>
+            <div class="mt-3">
+                <button type="submit" class="btn btn-dark" id="plant-update-btn">Submit</button>
+                <button type="click" class="btn btn-dark" id="update-back-btn">Go Back</button>
+            </div>
+        </form>
+    </div>
 </div>
 
 <script src="/js/profile.js"></script>
