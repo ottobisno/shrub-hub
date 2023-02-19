@@ -1,25 +1,35 @@
-<div class="card text-center mt-3 shadow box" id="plant-card" data-id="{{id}}">
-  <h2 class="text-dark mt-3 font-weight-bold">{{name}}</h2>
-  <p class="px-3">{{classification}}</p>
-  <p><small class="text-muted">Posted by: {{user.name}} on {{formatDate date_created}}</small></p>
+<div class="row justify-content-center align-items-start">
+  <div class="card plant-card mt-4 mx-4 col-8 col-md-4" id="plant-card" data-id="{{id}}">
+    <h2 class="card-header text-center light-grn">{{name}}</h2>
+    <img src="/img/uploads/{{image}}" alt="image of a {{classification}} plant">
+    <div class="card-body bg-light p-0">
+      <p class="card-text plant-card-classification mb-0">{{classification}}</p>
+      <p class="card-text plant-card-user p-1"><small class="text-muted">Posted by: {{user.name}} on {{formatDate date_created}}</small></p>
+    </div>
+  </div>
+  <div class="container mx-4 col-11 col-sm-10 col-md-6">
+    <div class="row justify-content-center">
+      <h2 class="page-header text-center dark-grn mt-4">Comments</h2>
+    {{#if comments}}
+    {{#each comments as |comment|}}
+      <div class="card text-center mt-3 drop-shadow">
+        <p class="p-3 mb-0">{{comment_body}}</p>
+        <p class="comment-author"><small class="text-muted">Posted by: {{created_by}} on {{formatDate date_created}}</small></p>
+      </div>
+    {{/each}}
+    {{/if}}
+    {{#if logged_in}}
+      <form class="form my-3" id="comment-form">
+        <label for="adding-comment" class="form-label comment-label">Leave a comment:</label>
+        <textarea class="form-control drop-shadow" id="comment-body" rows="3"></textarea>
+        <button type="submit" class="btn btn-dark-grn new-comment mt-3" id="comment-submit-btn">Submit</button>
+      </form>
+    {{else}}
+      <p class="comment-label text-center mt-2">Please login to leave a comment.</p>
+    {{/if}}
+    </div>
+  </div>
 </div>
-
-{{#if logged_in}}
-<form class="form my-3" id="comment-form">
-  <label for="adding-comment" class="form-label">Leave a comment:</label>
-  <textarea class="form-control" id="comment-body" rows="3"></textarea>
-  <button type="submit" class="btn btn-dark new-comment mt-3" id="comment-submit-btn">Submit</button>
-</form>
-{{/if}}
-
-{{#if comments}}
-{{#each comments as |comment|}}
-<div class="card text-center mt-5 shadow box">
-  <p class="p-3">{{comment_body}}</p>
-  <p><small class="text-muted">Posted by: {{created_by}} on {{formatDate date_created}}</small></p>
-</div>
-{{/each}}
-{{/if}}
 
 {{#if logged_in}}
 <script src="/js/plant.js"></script>

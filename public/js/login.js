@@ -39,6 +39,8 @@ const signupFormHandler = async (event) => {
         if (response.ok) {
             document.location.replace('/profile');
         } else {
+            const jsonBody = await response.json();
+            console.log(jsonBody)
             alert('Please ensure you are using a valid email and the password you have entered is at least 8 characters in length');
         };
     };

@@ -14,8 +14,9 @@ router.post('/', async (req, res) => {
             res.status(200).json(userData);
         });
 
-    } catch (err) { 
-        res.status(400).json({ message: 'Please ensure you are using a valid email and the password you have entered is at least 8 characters in length' });
+    } catch (err) {
+        console.log(err.message);
+        res.status(400).json({ message: err.message });
     };
 });
 
