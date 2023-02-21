@@ -5,13 +5,13 @@
 <div class="row justify-content-center">
   {{#each plants as |plant| }}
   <div class="card plant-card mt-4 mx-2 col-8 col-sm-5 col-md-3 col-xxl-2">
-    <a class="card-header plant-card-header text-center light-grn" href="/plant/{{plant.id}}">
-      <h2 class="mb-0">{{plant.name}}</h2>
+    <a class="card-header plant-card-header text-center light-grn" href="/plant/{{id}}">
+      <h2 class="mb-0">{{name}}</h2>
     </a>
-    <img src="/img/uploads/{{plant.image}}" alt="image of a {{plant.classification}} plant">
-    <div class="card-body bg-light p-0">
-      <p class="card-text plant-card-classification mb-0">{{plant.classification}}</p>
-      <p class="card-text plant-card-user p-1"><small class="text-muted">Posted by: {{plant.user.name}} on {{formatDate plant.date_created}}</small></p>
+    <img src="/img/uploads/{{image}}" alt="image of a {{classification}} plant">
+    <div class="bg-light p-0">
+      <p class="card-text plant-card-classification mb-0">{{classification}}</p>
+      <p class="card-text plant-card-user p-1"><small class="text-muted">Posted by: {{user.name}} on {{formatDate date_created}}</small></p>
     </div>
   </div>
   {{/each}}

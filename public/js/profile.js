@@ -1,7 +1,7 @@
 // Assigning commonly used elements to variables
-const newPlantForm = document.querySelector('#new-plant-card');
+const newPlantPage = document.querySelector('#new-plant-page');
 const newPlantBtn = document.querySelector('#new-plant-btn');
-const updatePlantForm = document.querySelector('#update-plant-card');
+const updatePlantPage = document.querySelector('#update-plant-page');
 const profileHeader = document.querySelector('#profile-header');
 
 // Declaring global variables for values that are stored in the HTML data-attributes
@@ -10,9 +10,9 @@ var plantName;
 var plantClassification;
 
 // Collapses the 'Add New Plant' button and displays the form to create a new plant
-const showNewPlantFormHandler = () => {
+const showNewPlantPageHandler = () => {
     // Displaying the form for creating a new plant and hiding other elements
-    newPlantForm.setAttribute('style', 'display: flex');
+    newPlantPage.setAttribute('style', 'display: flex');
     newPlantBtn.setAttribute('style', 'display: none');
     profileHeader.setAttribute('style', 'display: none');
 
@@ -24,9 +24,9 @@ const showNewPlantFormHandler = () => {
 };
 
 // Handler for hiding the form to create a new plant
-const hideNewPlantFormHandler = () => {
+const hideNewPlantPageHandler = () => {
     // Hiding the form for creating a new plant and showing other elements
-    newPlantForm.setAttribute('style', 'display: none');
+    newPlantPage.setAttribute('style', 'display: none');
     newPlantBtn.setAttribute('style', 'display: flex');
     profileHeader.setAttribute('style', 'display: block');
 
@@ -102,7 +102,7 @@ const plantUpdateHandler = async (event) => {
         profileHeader.setAttribute('style', 'display: none');
 
         // Displaying form to update the selected plant
-        updatePlantForm.setAttribute('style', 'display: flex');
+        updatePlantPage.setAttribute('style', 'display: flex');
 
         // Prefilling form fields for the plant to be updated
         document.querySelector('#updated-name').value = plantName;
@@ -134,9 +134,9 @@ const plantUpdateSubmit = async (event) => {
 };
 
 // Handler for hiding the form to update a plant
-const hideUpdatePlantFormHandler = () => {
+const hideUpdatePlantPageHandler = () => {
     // Hiding the form for updating a plant and showing other elements
-    updatePlantForm.setAttribute('style', 'display: none');
+    updatePlantPage.setAttribute('style', 'display: none');
     newPlantBtn.setAttribute('style', 'display: flex');
     profileHeader.setAttribute('style', 'display: block');
 
@@ -148,7 +148,7 @@ const hideUpdatePlantFormHandler = () => {
 };
 
 newPlantBtn
-    .addEventListener('click', showNewPlantFormHandler);
+    .addEventListener('click', showNewPlantPageHandler);
 
 document
     .querySelector('#new-plant-form')
@@ -156,7 +156,7 @@ document
 
 document
     .querySelector('#new-back-btn')
-    .addEventListener('click', hideNewPlantFormHandler);
+    .addEventListener('click', hideNewPlantPageHandler);
 
 document
     .addEventListener('click', plantDeleteHandler);
@@ -170,4 +170,4 @@ document
 
 document
     .querySelector('#update-back-btn')
-    .addEventListener('click', hideUpdatePlantFormHandler);
+    .addEventListener('click', hideUpdatePlantPageHandler);

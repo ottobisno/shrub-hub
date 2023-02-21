@@ -1,70 +1,82 @@
-<h2 class="text-dark text-center font-weight-bold pt-3" id="profile-header">Welcome Back, {{name}}! Here Are Your Current Plants:</h2>
-{{#if plants}}
-{{#each plants as |plant|}}
-<div class="card text-center mt-3 shadow box plant-card">
-    <a class="card-header plant-card-header text-center light-grn" href="/plant/{{id}}">
-        <h2>{{name}}</h2>
-    </a>
-    <p class="px-3">{{classification}}</p>
-    <p><small class="text-muted">Posted by: {{../name}} on {{formatDate date_created}}</small></p>
-    <div class="plant-functions mb-3 d-flex justify-content-center">
-        <button type="click" class="btn btn-primary update-btn mx-1" data-update="{{id}}" data-name="{{name}}" data-classification="{{classification}}">Update</button>
-        <button type="click" class="btn btn-danger delete-btn mx-1" data-delete="{{id}}">Delete</button>
-    </div>
+{{!-- Header and plant cards (if present) --}}
+<div class="row justify-content-center">
+    <h2 class="page-header text-center dark-grn mt-4 py-1 col-9 col-sm-11 col-md-10 col-xxl-11" id="profile-header">Welcome Back, {{name}}! Your Current Plants:
+    </h2>
 </div>
-{{/each}}
-{{/if}}
-<div class="d-flex justify-content-center my-3">
-    <button type="click" class="btn btn-dark" id="new-plant-btn" style="display: flex">Add New Plant</button>
+<div class="d-flex justify-content-center mt-4">
+    <button type="click" class="btn btn-dark-grn" id="new-plant-btn">Add New Plant</button>
+</div>
+<div class="row justify-content-center">
+    {{#if plants}}
+    {{#each plants as |plant|}}
+    <div class="card plant-card text-center mt-4 mx-2 col-8 col-sm-5 col-md-3 col-xxl-2">
+        <a class="card-header plant-card-header text-center light-grn" href="/plant/{{id}}">
+            <h2 class="mb-0">{{name}}</h2>
+        </a>
+        <img src="/img/uploads/{{image}}" alt="image of a {{classification}} plant">
+        <div class="bg-light p-0">
+            <p class="card-text plant-card-classification mb-0">{{classification}}</p>
+            <div class="my-1">
+                <button type="click" class="btn btn-dark-grn update-btn mx-1" data-update="{{id}}" data-name="{{name}}" data-classification="{{classification}}">Update</button>
+                <button type="click" class="btn btn-dark-grn delete-btn mx-1" data-delete="{{id}}">Delete</button>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    {{/if}}
 </div>
 
 {{!-- Form for adding a new plant --}}
 <div class="container d-flex justify-content-center">
-    <div class="card p-3 profile-card" id="new-plant-card" style="display: none">
-        <h2 class="card-title p-0">Add a New Plant:</h2>
-        <form class="form" id="new-plant-form" enctype="multipart/form-data">
-            <div>
-                <label for="plant-name" class="form-label">Name of Plant:</label>
-                <input class="form-control" id="plant-name" name="name" required>
-            </div>
-            <div class="mt-3">
-                <label for="plant-classification" class="form-label">Classification of Plant:</label>
-                <input class="form-control" id="plant-classification" name="classification" required>
-            </div>
-            <div class="mt-3">
-                <span for="plant-image" class="form-label">Image of Plant:</span>
-                <input type="file" class="form-control-file mt-2" id="img-upload" name="image" required>
-            </div>
-            <div class="mt-3">
-                <button type="submit" class="btn btn-dark" id="plant-submit-btn">Submit</button>
-                <button type="click" class="btn btn-dark" id="new-back-btn">Go Back</button>
-            </div>
-        </form>
+    <div class ="row justify-content-center" style="display: none" id="new-plant-page">
+        <h2 class="page-header text-center dark-grn py-1 col-11 col-sm-10 col-md-7">New Plant Information:</h2>
+        <div class="card form-card p-3 col-10 col-sm-9 col-md-6">
+            <form class="form" id="new-plant-form" enctype="multipart/form-data">
+                <div>
+                    <label for="plant-name" class="form-label">Name of Plant:</label>
+                    <input class="form-control" id="plant-name" name="name" required>
+                </div>
+                <div class="mt-3">
+                    <label for="plant-classification" class="form-label">Classification of Plant:</label>
+                    <input class="form-control" id="plant-classification" name="classification" required>
+                </div>
+                <div class="mt-3">
+                    <span for="plant-image" class="form-label">Image of Plant:</span>
+                    <input type="file" class="form-control-file mt-2" id="img-upload" name="image" required>
+                </div>
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-dark-grn" id="plant-submit-btn">Submit</button>
+                    <button type="click" class="btn btn-dark-grn" id="new-back-btn">Go Back</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
 {{!-- Form for updating an existing plant --}}
 <div class="container d-flex justify-content-center">
-    <div class="card p-3 profile-card" id="update-plant-card" style="display: none">
-        <h2 class="card-title p-0">Update Existing Plant:</h2>
-        <form class="form" id="update-plant-form" enctype="multipart/form-data">
-            <div>
-                <label for="plant-name" class="form-label">Name of Plant:</label>
-                <input class="form-control" id="updated-name" name="name" required>
-            </div>
-            <div class="mt-3">
-                <label for="plant-classification" class="form-label">Classification of Plant:</label>
-                <input class="form-control" id="updated-classification" name="classification" required>
-            </div>
-            <div class="mt-3">
-                <span for="plant-image" class="form-label">Image of Plant:</span>
-                <input type="file" class="form-control-file mt-2" id="img-upload" name="image" required>
-            </div>
-            <div class="mt-3">
-                <button type="submit" class="btn btn-dark" id="plant-update-btn">Submit</button>
-                <button type="click" class="btn btn-dark" id="update-back-btn">Go Back</button>
-            </div>
-        </form>
+    <div class ="row justify-content-center" style="display: none" id="update-plant-page">
+        <h2 class="page-header text-center dark-grn py-1 col-11 col-sm-10 col-md-7">Update Information:</h2>
+        <div class="card form-card p-3 col-10 col-sm-9 col-md-6">
+            <form class="form" id="update-plant-form" enctype="multipart/form-data">
+                <div>
+                    <label for="plant-name" class="form-label">Name of Plant:</label>
+                    <input class="form-control" id="updated-name" name="name" required>
+                </div>
+                <div class="mt-3">
+                    <label for="plant-classification" class="form-label">Classification of Plant:</label>
+                    <input class="form-control" id="updated-classification" name="classification" required>
+                </div>
+                <div class="mt-3">
+                    <span for="plant-image" class="form-label">Image of Plant:</span>
+                    <input type="file" class="form-control-file mt-2" id="img-upload" name="image" required>
+                </div>
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-dark-grn" id="plant-update-btn">Submit</button>
+                    <button type="click" class="btn btn-dark-grn" id="update-back-btn">Go Back</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 

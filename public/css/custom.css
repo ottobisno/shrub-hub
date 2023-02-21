@@ -56,6 +56,11 @@ body {
     filter: drop-shadow(5px 5px 10px black);
 }
 
+.form-card {
+    border-width: 2px;
+    border-color: var(--dark-grn);
+}
+
 .light-grn {
     background-color: var(--light-grn);
 }
@@ -66,7 +71,7 @@ body {
 }
 
 .page-header {
-    font-size: 2rem;
+    font-size: calc(1.2rem + .9vw);
     font-weight: 700;
     text-shadow: 2px 2px black;
     color: whitesmoke;
@@ -122,10 +127,6 @@ body {
 
 #plant-title-btn:focus {
     outline: none;
-}
-
-#profile-card {
-    width: 25rem;
 }
 
 #title {
