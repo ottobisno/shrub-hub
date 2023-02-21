@@ -11,15 +11,17 @@
     <div class="row justify-content-center">
       <h2 class="page-header text-center dark-grn mt-4">Comments</h2>
     {{#if comments}}
-    {{#each comments as |comment|}}
-      <div class="card text-center mt-3 drop-shadow">
-        <p class="p-3 mb-0">{{comment_body}}</p>
-        <p class="comment-author"><small class="text-muted">Posted by: {{created_by}} on {{formatDate date_created}}</small></p>
+      <div class="px-2">
+      {{#each comments as |comment|}}
+        <div class="card text-center mt-3 drop-shadow">
+          <p class="p-3 mb-0">{{comment_body}}</p>
+          <p class="comment-author"><small class="text-muted">Posted by: {{created_by}} on {{formatDate date_created}}</small></p>
+        </div>
+      {{/each}}
       </div>
-    {{/each}}
     {{/if}}
     {{#if logged_in}}
-      <form class="form my-3" id="comment-form">
+      <form class="form my-3 px-3" id="comment-form">
         <label for="adding-comment" class="form-label comment-label">Leave a comment:</label>
         <textarea class="form-control drop-shadow" id="comment-body" rows="3"></textarea>
         <button type="submit" class="btn btn-dark-grn new-comment mt-3" id="comment-submit-btn">Submit</button>

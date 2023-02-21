@@ -3,6 +3,8 @@ const newPlantForm = document.querySelector('#new-plant-card');
 const newPlantBtn = document.querySelector('#new-plant-btn');
 const updatePlantForm = document.querySelector('#update-plant-card');
 const profileHeader = document.querySelector('#profile-header');
+
+// Declaring global variables for values that are stored in the HTML data-attributes
 var plantID;
 var plantName;
 var plantClassification;
@@ -84,7 +86,7 @@ const plantDeleteHandler = async (event) => {
 const plantUpdateHandler = async (event) => {
     if (event.target.hasAttribute('data-update')) {
 
-        // Assigning values to global variables
+        // Assigning data-attribute values to global variables
         plantID = event.target.getAttribute('data-update');
         plantName = event.target.getAttribute('data-name');
         plantClassification = event.target.getAttribute('data-classification');

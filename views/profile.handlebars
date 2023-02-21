@@ -2,8 +2,8 @@
 {{#if plants}}
 {{#each plants as |plant|}}
 <div class="card text-center mt-3 shadow box plant-card">
-    <a class="card-header plant-card-header text-center light-grn" href="/plant/{{plant.id}}">
-        <h2>{{plant.name}}</h2>
+    <a class="card-header plant-card-header text-center light-grn" href="/plant/{{id}}">
+        <h2>{{name}}</h2>
     </a>
     <p class="px-3">{{classification}}</p>
     <p><small class="text-muted">Posted by: {{../name}} on {{formatDate date_created}}</small></p>

@@ -19,7 +19,13 @@ User.init(
         },
         name: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                len: {
+                    args: [2,7],
+                    msg: 'Please enter a name that is between 2 and 7 characters in length'
+                }           
+            }
         },
         email: {
             type: DataTypes.STRING,
