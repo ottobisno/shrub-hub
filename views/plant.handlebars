@@ -1,3 +1,4 @@
+{{!-- Plant card --}}
 <div class="row justify-content-center align-items-start">
   <div class="card plant-card mt-4 mx-4 col-8 col-md-4" id="plant-card" data-id="{{id}}">
     <h2 class="card-header text-center light-grn">{{name}}</h2>
@@ -7,6 +8,7 @@
       <p class="card-text plant-card-user p-1"><small class="text-muted">Posted by: {{user.name}} on {{formatDate date_created}}</small></p>
     </div>
   </div>
+  {{!-- Comments section --}}
   <div class="container mx-4 col-11 col-sm-10 col-md-6">
     <div class="row justify-content-center">
       <h2 class="page-header text-center dark-grn py-1 mt-4">Comments</h2>

@@ -1,6 +1,7 @@
 const plantCard = document.querySelector('#plant-card');
 const plant_id = plantCard.getAttribute('data-id');
 
+// Handler for submitting a comment
 const submitCommentHandler = async (event) => {
     event.preventDefault();
 
